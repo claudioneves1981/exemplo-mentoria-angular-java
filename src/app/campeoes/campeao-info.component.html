@@ -1,0 +1,70 @@
+<h2>Informações Campeão</h2>
+
+<hr/>
+
+<form #campeaoForm="ngForm">
+
+    <div class="form-group row">
+
+        <label class="col-sm-2 col-form-label">Nome</label>
+    
+        <div class="col-sm-10">
+            <input [(ngModel)]="campeao.nome" required name="nome" #campeaoNome="ngModel" [ngClass]="{'is-invalid': campeaoNome.invalid}" class="form-control">
+        
+            <div class="invalid-feedback">
+                <span>Campeao é requerido</span>
+            </div>
+
+        </div>
+    
+    </div>
+
+    <div class="form-group row">
+
+        <label class="col-sm-2 col-form-label">Email</label>
+    
+        <div class="col-sm-10">
+            <input [(ngModel)]="campeao.email" required name="email" #campeaoEmail="ngModel" [ngClass]="{'is-invalid': campeaoEmail.invalid}" class="form-control">
+        
+            <div class="invalid-feedback">
+                <span>Email é requerido</span>
+            </div>
+
+        </div>
+    
+    </div>
+
+    <div class="form-group row">
+
+        <label class="col-sm-2 col-form-label">Tipo</label>
+    
+        <div class="col-sm-10">
+            <input [(ngModel)]="campeao.tipo" required name="tipo" #campeaoTipo="ngModel" [ngClass]="{'is-invalid': campeaoTipo.invalid}" class="form-control">
+        
+            <div class="invalid-feedback">
+                <span>Tipo é requerido</span>
+            </div>
+
+        </div>
+    
+    </div>
+
+    <div class="form-group row">
+
+        <label class="col-sm-2 col-form-label">Cor do Sabre</label>
+    
+        <div class="col-sm-10">
+            <input [(ngModel)]="campeao.corSabre" required name="corSabre" #campeaoCorSabre="ngModel" [ngClass]="{'is-invalid': campeaoCorSabre.invalid}" class="form-control">
+        
+            <div class="invalid-feedback">
+                <span>Cor do Sabre é requerido</span>
+            </div>
+
+        </div>
+    
+    </div>
+
+    <button [disabled]="campeaoForm.invalid" (click)="save()" class="btn btn-primary mr-2">Salvar</button>
+    <button [routerLink]="['/campeao']" class="btn btn-secondary">Voltar</button>
+
+</form>

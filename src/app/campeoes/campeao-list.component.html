@@ -1,0 +1,40 @@
+<h2>Lista de Campeões</h2>
+
+<div class="form-group row">
+
+    <label class="col-sm-2 col-form-label">Fitrar Por</label>
+
+    <div class="col-sm-10">
+        <input [(ngModel)]="filter" class="form-control">
+    </div>
+
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Cor do Sabre</th>
+        <th>Tipo</th>
+        <th>Opçoes</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let campeao of filteredCampeoes">
+            <td>{{campeao.nome}}</td>
+            <td>{{campeao.email}}</td>
+            <td>{{campeao.corSabre}}</td>
+            <td>{{campeao.tipo}}</td>
+            <!--<td><app-star [rating]="campeao.afinidadeForca"></app-star></td>
+            <td><app-star [rating]="campeao.forcaFisica"></app-star></td>
+            <td>{{campeao.hp}}</td>
+            <td><app-star [rating]="campeao.habilidadeComSabre"></app-star></td>
+            <td><app-star [rating]="campeao.mental"></app-star></td>
+            <td><app-star [rating]="campeao.previsao"></app-star></td>-->
+             <td>
+                 <a [routerLink]="['/campeao/info', campeao.id]" class="btn btn-primary">Editar Campeao</a>
+             </td>
+        </tr>
+    </tbody>
+</table>
