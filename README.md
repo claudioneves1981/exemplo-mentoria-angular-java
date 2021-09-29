@@ -60,4 +60,4 @@ Abaixo, seguem links dos principais recursos usados no projeto.
 * [Bootstrap 5.0.1](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
 * [Node Js](https://nodejs.org/en/)
 * [Documentação Angular](https://angular.io/docs)
-* [Referencia para Montagem do Projeto](https://github.com/dsyer/spring-boot-angular)
+* [GitHub Referencia para Montagem do Projeto com Angular](https://github.com/dsyer/spring-boot-angular)
