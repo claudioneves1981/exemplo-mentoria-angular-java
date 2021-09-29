@@ -1,27 +1,65 @@
-# CampeaoManager
+<h2> Exemplo Mentoria Java com Angular</h2>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.6.
+Para clonar o projeto(com GitHub Cli)
+```
+gh repo clone claudioneves1981/exemplo-mentoria-angular-java
+```
 
-## Development server
+acessando a pasta do projeto execute o seguinte comando instalar o angular CLI
+```
+$ ./npm install @angular/cli
+```
+logo em seguida verifique se o angular está instalado corretamente executando o seguinte comando
+```
+./ng --version
+```
+execute o comando abaixo para setar a pasta de target para o angular.
+```
+$ sed -i -e 's,dist/client,target/classes/static,' angular.json
+```
+Instale os modulos pelo maven usando  ```./mvnw generate-resources```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+crie uma pasta chamada static dentro de target/classes
 
-## Code scaffolding
+Para executar o projeto no terminal, digite o seguinte comando:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```shell script
+mvn spring-boot:run 
+```
 
-## Build
+Você pode testar os endpoints e a documentação usando swagger ui
+```
+http://localhost:8080/swagger-ui.html
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+para visualizar a pagina principal você pode digitar.
 
-## Running unit tests
+```
+http://localhost:8080/
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+São necessários os seguintes pré-requisitos para a execução do projeto:
 
-## Running end-to-end tests
+* Java 8 ou versões superiores.
+* Maven
+* Intellj IDEA Community Edition ou sua IDE favorita.
+* Controle de versão GIT instalado na sua máquina.
+* GitHub Cli instalado na sua maquina.
+* Conta no GitHub para o armazenamento do seu projeto na nuvem.
+* H2 para banco de dados.
+* Node JS
+* Bootstrap e Angular para fazer o front.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Abaixo, seguem links dos principais recursos usados no projeto.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+* [Referência do Intellij IDEA Community, para download](https://www.jetbrains.com/idea/download)
+* [Palheta de atalhos de comandos do Intellij](https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf)
+* [Site oficial do Spring](https://spring.io/)
+* [Site oficial do GIT](https://git-scm.com/)
+* [Site oficial do GitHub](http://github.com/)
+* [Github Cli](https://cli.github.com/)
+* [Referência para o padrão arquitetural REST](https://restfulapi.net/)
+* [Bootstrap 5.0.1](https://getbootstrap.com/docs/5.1/getting-started/introduction/)
+* [Node Js](https://nodejs.org/en/)
+* [Documentação Angular](https://angular.io/docs)
+* [Referencia para Montagem do Projeto](https://github.com/dsyer/spring-boot-angular)
