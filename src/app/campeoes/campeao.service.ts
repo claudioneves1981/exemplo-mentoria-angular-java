@@ -9,14 +9,14 @@ import { Campeao } from "./campeoes";
 })
 export class CampeaoService {
 
-    private campeaoUrl: string = "http://localhost:8080/campeao/listar";
+    private campeaoUrl: string = "https://exemplo-mentoria-angular-java-production.up.railway.app/campeao/listar";
 
     constructor(private httpClient: HttpClient){}
 
     getData(): Observable<any> {
         return from(
           fetch(
-            'http://localhost:8080/campeao/listar', // the url you are trying to access
+            'https://exemplo-mentoria-angular-java-production.up.railway.app/campeao/listar', // the url you are trying to access
             {
                 headers: {'Content-Type': 'application/json', 
                 'Access-Control-Allow-Origin': '*'},
